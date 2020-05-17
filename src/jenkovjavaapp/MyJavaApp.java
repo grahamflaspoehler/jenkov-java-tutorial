@@ -6,22 +6,22 @@ import java.util.Arrays;
 public class MyJavaApp {
   public static void main(String[] args) {
 
-    methodOne("1234");
+    String[] strings = {"John", "Jennifer", "Graham", "Jeff", "Joe"};
 
-  }
+    int wordsStartingWithJ = 0;
+    System.out.println("Before loop: " + wordsStartingWithJ);
+    for (int i=0; i < strings.length; i++) {
+      if (! strings[i].toLowerCase().startsWith("j")){
+        continue;
+      }
 
-  public static void methodOne(String input) {
-    if ( isValid(input) ) {
-      System.out.println(input + " is valid");
-    } else {
-      System.out.println(input + " isn't valid");
+      wordsStartingWithJ++;
     }
-  }
+    System.out.println("After loop: " + wordsStartingWithJ);
 
-  public static boolean isValid(String value) {
-    if ( value.equals("123") ) {
-      return true;
-    }
-    return false;
+
+
+
+
   }
 }
