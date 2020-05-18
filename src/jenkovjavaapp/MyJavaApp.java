@@ -6,18 +6,20 @@ import java.util.Arrays;
 public class MyJavaApp {
   public static void main(String[] args) {
 
-    String[] strings = {"John", "Jennifer", "Graham", "Jeff", "Joe"};
+    Car car = new Car();
+    System.out.println("New car created");
+    System.out.println("Seats: " + car.getNumberOfSeats());
+    System.out.println("License Plate: " + car.getLicensePlate());
+    System.out.println("");
+    System.out.println("---------------------------------");
 
-    int wordsStartingWithJ = 0;
-    System.out.println("Before loop: " + wordsStartingWithJ);
-    for (int i=0; i < strings.length; i++) {
-      if (! strings[i].toLowerCase().startsWith("j")){
-        continue;
-      }
+    car.setLicensePlate("FZ 1078");
+    System.out.println("Set license plate");
+    System.out.println("License Plate: " + car.getLicensePlate());
+    
 
-      wordsStartingWithJ++;
-    }
-    System.out.println("After loop: " + wordsStartingWithJ);
+
+
 
 
 
