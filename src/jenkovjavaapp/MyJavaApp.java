@@ -15,6 +15,10 @@ public class MyJavaApp {
 
     System.out.println("Calling a method from MyCollectionUtil:");
     MyCollectionUtil.doSomething(collection);
+
+    System.out.println("Remove an element from a collection");
+    boolean elementWasRemoved = collection.remove(anElement);
+    System.out.println("Removal successful: " + elementWasRemoved);
   }
 
 }
