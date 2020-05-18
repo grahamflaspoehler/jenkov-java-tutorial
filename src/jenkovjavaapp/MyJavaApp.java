@@ -1,29 +1,20 @@
 package jenkovjavaapp;
 
-import java.util.Arrays;
-
+import java.util.Collection;
+import java.util.HashSet;
 
 public class MyJavaApp {
   public static void main(String[] args) {
 
-    Car car = new Car();
-    System.out.println("New car created");
-    System.out.println("Seats: " + car.getNumberOfSeats());
-    System.out.println("License Plate: " + car.getLicensePlate());
-    System.out.println("");
-    System.out.println("---------------------------------");
+    String anElement = "an element";
+    Collection collection = new HashSet();
 
-    car.setLicensePlate("FZ 1078");
-    System.out.println("Set license plate");
-    System.out.println("License Plate: " + car.getLicensePlate());
-    
+    boolean didCollectionChange = collection.add(anElement);
+    System.out.println("anElement was added: " + didCollectionChange);
 
 
-
-
-
-
-
-
+    System.out.println("Calling a method from MyCollectionUtil:");
+    MyCollectionUtil.doSomething(collection);
   }
+
 }
