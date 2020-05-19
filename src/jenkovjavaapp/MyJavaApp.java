@@ -16,13 +16,8 @@ public class MyJavaApp {
     list.add(element1);
     list.add(element2);
 
-    int index1 = list.indexOf(element1);
-    int index2 = list.indexOf(element2);
-    int index3 = list.indexOf(element3);
-
-    System.out.println("Index 1: " + index1);
-    System.out.println("Index 2: " + index2);
-    System.out.println("Index 3: " + index3);
+    boolean containsElement1 = list.contains(element1);
+    System.out.println("List contains element1: " + containsElement1);
   }
 
 }
