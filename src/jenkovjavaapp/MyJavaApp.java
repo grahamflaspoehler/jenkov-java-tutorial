@@ -1,24 +1,28 @@
 package jenkovjavaapp;
 
-import java.util.Collection;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyJavaApp {
+
   public static void main(String[] args) {
 
-    String anElement = "an element";
-    Collection collection = new HashSet();
+    List<String> list = new ArrayList<>();
 
-    boolean didCollectionChange = collection.add(anElement);
-    System.out.println("anElement was added: " + didCollectionChange);
+    String element1 = "el 1";
+    String element2 = "el 2";
+    String element3 = "el 3";
 
+    list.add(element1);
+    list.add(element2);
 
-    System.out.println("Calling a method from MyCollectionUtil:");
-    MyCollectionUtil.doSomething(collection);
+    int index1 = list.indexOf(element1);
+    int index2 = list.indexOf(element2);
+    int index3 = list.indexOf(element3);
 
-    System.out.println("Remove an element from a collection");
-    boolean elementWasRemoved = collection.remove(anElement);
-    System.out.println("Removal successful: " + elementWasRemoved);
+    System.out.println("Index 1: " + index1);
+    System.out.println("Index 2: " + index2);
+    System.out.println("Index 3: " + index3);
   }
 
 }
